@@ -1,0 +1,21 @@
+{
+  "type": "mssql",
+  "host": "localhost",
+  "port":1433,
+  "username": "sa",
+  "password": "2980037801",
+  "database": "crm2",
+  "entities": [
+    "dist/**/*.entity{.ts,.js}"
+  ],
+  "options": { "encrypt": false },
+  "synchronize": false,
+  "migrations": [
+    "dist/migrations/*.js"
+  ],
+  "migrationsRun": true,
+  "cli": {
+    "migrationsDir": "src/migrations",
+    "entitiesDir": "src/entities"
+  }
+}
