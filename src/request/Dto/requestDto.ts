@@ -26,9 +26,6 @@ export class RequestDto {
   @Column()
   userid: number;
 
-  @ApiProperty()
-  @Column()
-  customerid: number;
 
   @ApiProperty({ enum: ['SEND', 'IN_PROGSESS', 'DONE'] })
   @Column()

@@ -1,5 +1,6 @@
-import {BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import { Request } from "./request.entity";
+import {BaseEntity, Column, Entity,  OneToMany,  PrimaryGeneratedColumn} from "typeorm";
+import { User } from "./user.entity";
+
 
 @Entity()
 export class Customer extends BaseEntity {
@@ -9,6 +10,6 @@ export class Customer extends BaseEntity {
   @Column()
   name: string;
 
-  @OneToMany(() => Request, (Request) => Request.Customer)
-  Request: Request[];
+  @OneToMany(() => User, (user) => user.customer)
+  user: User[];
 }

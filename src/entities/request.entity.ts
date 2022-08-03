@@ -1,6 +1,6 @@
-import {BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import { Customer } from "./customer.entity";
+import {BaseEntity, Column, Entity,  ManyToOne,  OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import { Respons } from "./respons.entity";
+import { User } from "./user.entity";
 
 @Entity()
 export class Request extends BaseEntity {
@@ -18,17 +18,15 @@ export class Request extends BaseEntity {
   @Column()
   modifydatetime: Date;
 
+
   @Column()
-  userid: number;
-  
-@Column()
   status: taskstatus;
 
   @OneToMany(() => Respons, (Respons) => Respons.Request)
   Respons: Respons[];
 
-  @ManyToOne(() => Customer, (Customer) => Customer.Request)
-  Customer: Customer;
+  @ManyToOne(() => User, (user) => user.Request)
+  User: User;
 }
 
 export enum taskstatus{

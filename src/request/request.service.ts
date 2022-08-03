@@ -18,8 +18,7 @@ export class RequestService {
             request.description=requestDto.description;
             request.createdatatime=requestDto.createdatatime;
             request.modifydatetime=requestDto.modifydatetime;
-            request.userid=requestDto.userid;
-            request.Customer= <any>requestDto.customerid
+            request.User=<any>requestDto.userid;
             request.status=1 ;
             request.save();
             return 'عملیات با موفقیت انجام شد';
@@ -37,8 +36,7 @@ async updateRequest(requestDto : RequestDto){
         request.description = requestDto.description;
         request.createdatatime = requestDto.createdatatime;
         request.modifydatetime = requestDto.modifydatetime;
-        request.userid = requestDto.userid;
-        request.Customer = <any>requestDto.customerid;
+        request.User = <any>requestDto.userid;
         
         request.save();
         return 'آپدیت انجام شد';
