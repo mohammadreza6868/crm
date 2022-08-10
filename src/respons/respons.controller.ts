@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { ResponsDto } from './Dto/responsDto';
+import { ResponsDto } from './Dto/respons.Dto';
 import { ResponsService } from './respons.service';
 
 @ApiTags('respons')

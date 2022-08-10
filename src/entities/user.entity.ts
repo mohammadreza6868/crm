@@ -5,22 +5,22 @@ import { Request } from "./request.entity";
 @Entity()
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  Id: number;
 
   @Column()
-  ferstname: string;
+  FerstName: string;
 
   @Column()
-  lastname: string;
+  LastName: string;
 
   @Column()
-  email: string;
+  Email: string;
   @Column()
-  phonenumber: string;
+  PhoneNumber: string;
   @Column()
-  username: string;
+  UserName: string;
   @Column()
-  password: string;
+  Password: string;
 
   @OneToMany(() => Request, (Request) => Request.User)
   Request: Request[];

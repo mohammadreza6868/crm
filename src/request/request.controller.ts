@@ -8,7 +8,7 @@ import {
   Put,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { RequestDto } from './Dto/requestDto';
+import { RequestDto } from './Dto/request.Dto';
 import { RequestService } from './request.service';
 
 @ApiTags('request')

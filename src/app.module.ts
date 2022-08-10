@@ -6,10 +6,11 @@ import { AppService } from './app.service';
 import { RequestModule } from './request/request.module';
 import { ResponsModule } from './respons/respons.module';
 import { CustomerModule } from './customer/customer.module';
+import { UserModule } from './user/user.module';
 
 
 @Module({
-  imports: [ConfigModule.forRoot(), TypeOrmModule.forRoot(), RequestModule, ResponsModule, CustomerModule],
+  imports: [ConfigModule.forRoot(), TypeOrmModule.forRoot(), RequestModule, ResponsModule, CustomerModule, UserModule],
   controllers: [AppController],
   providers: [AppService,],
 })

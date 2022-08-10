@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Respons } from 'src/entities/respons.entity';
 import { Repository } from 'typeorm';
-import { ResponsDto } from './Dto/responsDto';
+import { ResponsDto } from './Dto/respons.Dto';
 
 @Injectable()
 export class ResponsService {
@@ -12,7 +12,7 @@ export class ResponsService {
         createResponse(responsDto : ResponsDto){
             let respons = new Respons()
             respons.description=responsDto.description;
-            respons.Request= <any>responsDto.requestid
+            respons.Request= <any>responsDto.requestid;
             respons.save()
             return 'عملیات با موفقیت انجام شد';
         }

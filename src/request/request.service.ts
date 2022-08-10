@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { request } from 'http';
 import { Request } from 'src/entities/request.entity';
 import { Repository } from 'typeorm';
-import { RequestDto } from './Dto/requestDto';
+import { RequestDto } from './Dto/request.Dto';
 
 @Injectable()
 export class RequestService {

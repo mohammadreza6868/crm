@@ -9,6 +9,9 @@ export class Respons extends BaseEntity {
   @Column()
   description: string;
 
+  
   @ManyToOne(() => Request, (Request) => Request.Respons)
   Request: Request;
 }
+
+
